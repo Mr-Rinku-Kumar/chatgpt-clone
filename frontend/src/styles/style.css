@@ -1,0 +1,248 @@
+/* General Reset and Font */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* App Layout */
+.home-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a,
+.logout-btn {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.sidebar button {
+  background-color: #495057;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background-color: #495057;
+}
+
+/* Chat Section */
+.chat-section {
+  flex: 1;
+  background-color: #343541;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.chat-window {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  scrollbar-width: thin;
+}
+
+/* Chat Messages */
+.chat-msg {
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: transparent;
+  color: #e0e0e0;
+}
+
+.chat-msg.user {
+  align-self: flex-end;
+  text-align: right;
+  color: #19c37d;
+}
+
+.chat-msg.bot {
+  align-self: flex-start;
+  text-align: left;
+  color: #fefefe;
+}
+
+/* Typing Animation */
+.chat-msg.typing {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  background-color: #444654;
+  padding: 10px 15px;
+  border-radius: 12px;
+  width: fit-content;
+  max-width: 80px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+  animation: blink 1.4s infinite both;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+/* Chat Form */
+.chat-form {
+  display: flex;
+  gap: 12px;
+  padding: 12px 20px 25px;
+  border-top: 1px solid #555;
+  background-color: #343541;
+}
+
+.chat-form input[type="text"] {
+  flex: 1;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #40414f;
+  color: white;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.chat-form input[type="text"]:focus {
+  box-shadow: 0 0 0 2px #19c37d;
+}
+
+.chat-form button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #19c37d;
+  color: white;
+  border: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chat-form button:hover {
+  background-color: #13a06f;
+  transform: scale(1.1);
+}
+
+/* Auth Forms */
+form {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Logout Button */
+.logout-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #0056b3;
+}
+
+.history-item{
+  cursor: pointer;
+}
